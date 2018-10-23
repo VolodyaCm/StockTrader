@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="select">
+    <mat-form-field class="selectBlock">
+      <mat-select [(value)]="selected" class="openSelect">
+        <mat-option value="all markets" (click)='message()'>All markets</mat-option>
+        <mat-option [value]='category' *ngFor='let category of categoryList' (click)='message()'>
+          {{category}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+ 

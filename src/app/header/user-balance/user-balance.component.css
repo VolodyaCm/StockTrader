@@ -1,0 +1,13 @@
+.balance {
+  position: fixed;
+  right: 0;
+  height: 48px;
+  top: 0;
+  line-height: 48px;
+  box-shadow: 0 0 10px 1px silver;
+  padding-left: 20px;
+  border-bottom-left-radius: 20px;
+  font-weight: bold;
+  color: #333;
+  background: #fff;
+}

@@ -1,0 +1,19 @@
+<div class="totalPrice">total price: <span class="bold">{{totalPrice}}$</span></div>
+<div class="block">
+  <div class="container">
+    <div *ngFor='let market of listOfpurchasedShares' class="market">
+        <h2>Name: {{market.name}}</h2>
+        <mat-chip-list>
+            <mat-chip color="silver" selected>{{market.category}}</mat-chip>
+        </mat-chip-list>
+        <p>Quantity: {{market.amount}}</p>
+        <p>Price: <span class="numberPrice"> {{market.price}}</span></p>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="amount" #numberStocks>
+            </mat-form-field>    
+        </form>
+        <button mat-flat-button (click)='sellStocks(numberStocks.value, market)' class="primaryButton">sell</button>
+    </div>
+  </div>
+</div>

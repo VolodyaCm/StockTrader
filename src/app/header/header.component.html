@@ -1,0 +1,20 @@
+<mat-tab-group>
+  <mat-tab label="Markets" #marketsButton>
+      <app-filter-by-category></app-filter-by-category>
+      <app-user-balance [userBalance]='userBalance'></app-user-balance>
+      <app-list-of-markets (changeBalance)='chB($event)'></app-list-of-markets>
+  </mat-tab>
+  <mat-tab label="Portfolio" #portfolioButton>
+      <app-user-balance [userBalance]='userBalance'></app-user-balance>
+      <app-user-portfolio [totalPrice]='totalPrice' (changeBalance)='chB2($event)'></app-user-portfolio>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+<!-- <input type="button" value="Markets" (click)='changeStatus(marketsButton.value)' #marketsButton>
+<input type="button" value="Portfolio" (click)='changeStatus(portfolioButton.value)' #portfolioButton> -->
+<!-- <app-user-balance [userBalance]='userBalance'></app-user-balance>
+<app-list-of-markets *ngIf='marketsStatus' (changeBalance)='chB($event)'></app-list-of-markets>
+<app-user-portfolio *ngIf='portfolioStatus'(changeBalance)='chB2($event)'></app-user-portfolio> -->
+

@@ -1,0 +1,32 @@
+.container {
+  position: absolute;
+  width: 100%;
+  /* left: calc(50% - 200px); */
+  display: flex;
+  background: #f2f2f2;
+  height: 40px;
+  justify-content: center;
+}
+
+.select {
+  width: 1000px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.openSelect {
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.selectBlock {
+  width: 250px;
+  margin-top: -9px;
+  box-shadow: 0 0 10px 1px silver;
+  padding: 5px;
+  overflow: hidden;
+  margin-left: 14px;
+}
+
