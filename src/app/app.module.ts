@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FilterByCategoryComponent } from './header/filter-by-category/filter-by-category.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     MatChipsModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

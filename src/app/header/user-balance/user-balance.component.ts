@@ -8,8 +8,11 @@ import { DataService } from '../../data.service';
   exportAs: 'user-balance'
 })
 export class UserBalanceComponent implements OnInit {
+
   @Input() userBalance;
+
   constructor() {}
+
   ngOnInit() {
   }
 

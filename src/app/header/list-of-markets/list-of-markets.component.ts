@@ -7,10 +7,14 @@ import { DataService } from '../../data.service';
   styleUrls: ['./list-of-markets.component.css']
 })
 export class ListOfMarketsComponent implements OnInit {
+
   @Output() changeBalance: EventEmitter<any> = new EventEmitter();
+
   public marketsList;
   public listOfpurchasedShares;
+
   constructor(private _data: DataService) {}
+
   buyStocks(amount, market) {
     const amountIsNumber = parseInt(amount);
     const fullPrice = amountIsNumber * market.price;
@@ -23,13 +27,12 @@ export class ListOfMarketsComponent implements OnInit {
       } else {
         _market.amount = +amountIsNumber;
         this._data.setPurchasedShares(_market);
-        console.log(fullPrice);
         this.changeBalance.emit(fullPrice);
-        console.log(this._data.getPurchasedShares());
       }
     }
     this._data.updateTotalPrice();
   }
+
   ngOnInit() {
     this.marketsList = this._data.getMarketsList();
     this.listOfpurchasedShares = this._data.getPurchasedShares();

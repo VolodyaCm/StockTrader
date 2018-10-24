@@ -4,15 +4,12 @@
     <mat-chip-list>
         <mat-chip color="silver" selected>{{market.category}}</mat-chip>
     </mat-chip-list>
-    <!-- <p class="marketData">{{market.category}}</p> -->
     <form class="example-form">
         <mat-form-field class="example-full-width">
             <input matInput placeholder="amount" #numberStocks>
         </mat-form-field>    
     </form>
     <p>Price: <span class="numberPrice"> {{market.price}}</span></p>
-    <!-- <input type="text" placeholder="amount" #numberStocks> -->
-    <!-- <input type="button" value="buy" (click)='buyStocks(numberStocks.value, market)'> -->
     <button mat-flat-button (click)='buyStocks(numberStocks.value, market)' class="primaryButton">Buy</button>
   </div>
 </div>

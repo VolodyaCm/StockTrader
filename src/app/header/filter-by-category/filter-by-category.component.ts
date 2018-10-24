@@ -11,8 +11,10 @@ export class FilterByCategoryComponent implements OnInit {
   public option = 0;
   public marketsList;
   public copyMarketsList;
-  constructor(private _data: DataService) {}
   public selected = 'all markets';
+
+  constructor(private _data: DataService) {}
+
   updateMarketsList() {
     this.marketsList.length = 0;
     this.copyMarketsList.forEach(el => {
@@ -20,12 +22,9 @@ export class FilterByCategoryComponent implements OnInit {
     });
   }
   message() {
-    console.log(this.selected);
     this.updateMarketsList();
-    console.log(this.selected);
     if (this.selected === 'all markets') {
       this.updateMarketsList();
-      console.log(this.marketsList);
     } else {
       const data = [];
       this.marketsList.forEach(el => {
